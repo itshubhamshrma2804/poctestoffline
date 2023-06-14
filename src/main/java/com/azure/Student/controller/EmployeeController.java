@@ -32,4 +32,15 @@ public class EmployeeController {
             return ResponseEntity.ok(employees);
         return ResponseEntity.ok(null);
     }
+
+    @RequestMapping(
+            value = "/api/v1/employee",
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public ResponseEntity<List<Employee>> getEmployees(){
+        return ResponseEntity.ok(employeeService.getEmployees());
+    }
+
+
 }

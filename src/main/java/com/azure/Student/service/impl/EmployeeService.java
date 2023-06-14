@@ -18,4 +18,9 @@ public class EmployeeService implements IEmployeeService {
     public List<Employee> saveEmployees(List<Employee> employees) {
         return employeeRepository.saveAll(employees);
     }
+
+    @Override
+    public List<Employee> getEmployees() {
+        return employeeRepository.findAll();
+    }
 }
